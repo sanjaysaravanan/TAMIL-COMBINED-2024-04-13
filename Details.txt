@@ -1,0 +1,106 @@
+
+
+Recap:
+  react-router-dom:
+    Routing the DOM using the url path,
+
+      uses window props location, history
+  
+    BrouserRouter:
+      parent wrapper tag which includes the routes tag
+
+    Routes:
+      includes all the routes
+
+    Route:
+      route with a pathname binds a dom to the path
+      
+    Link:
+      Link - anchor to a specific path
+      Navigates from one page to the other page
+
+    path params:
+      useParams
+    
+    Default Route:
+      default dom element when no route/path is found
+
+    query params:
+      useSearchParams
+  
+
+Topics:
+
+  React-Router-DOM
+    layout
+    navigation
+    useLocation
+
+  2. Props Drilling:
+      passing props from parent to children
+      Drilling of a particular or group of props to two or more levels of components
+
+      Lot of re-renders at different levels
+
+  3. Avoiding Props Drilling:
+
+      Drilling of props from Parent --> Child --> GrandChild
+
+      In Genereal, separate the props or state specific to the level( Component child/parent )
+        Where You keep the ren-rendering controlled at particular level rather than rendering whole application
+
+  4. Context:
+    ** context is to avoid only the props drilling, but the entire application will re-render again & again incase of change in context value **
+
+    ** Context should also be separated specific to the particular levels to avoid re-rendering of the entire application **
+
+    Creation:
+      Create a context using createContext
+    
+    Providing: 
+      using Context.Provider 
+    
+    Consuming/Subscribing:
+      using useContext
+
+    useContext used to avoid props drilling but not the re-rendering
+
+      context --> a base context for the entire application 
+        or at particular component level
+
+        hooks
+          1. Create Context 
+          2. useContext 
+      
+      Eg: theme --> light / dark theme for the entire application
+          language --> language for the entire application
+        
+        Programming Language Selection on coding platform
+      
+      Provider: Provides the Context to the entire component tree
+      Consume: useContext
+
+      Advantage:
+        Properties or state context on a grandparent component
+        can be used by a grandchild with using a middle parent
+      
+      Disadvantage:
+        Does not avoid the re-rendering of the child components
+  
+  6. Example: 
+        Simple Light Theme Dark Theme
+        Light / Theme Dark for E-Commerce Application
+
+        Convert all the states to use context
+
+  5. Working with Forms & basic data processing in reactjs
+    Please refer 
+
+        formState, handleChange ( function to change the formstate )
+
+        https://github.com/sanjaysaravanan/weekend-tamil-crud/blob/main/src/App.jsx
+    
+     for form handling using useState
+  
+Task:
+  Day 25: https://docs.google.com/document/d/1ft6tjqQj6dsLbHJ1t2fPHgTQRSZwAE-qBzlxqTqWezw/edit
